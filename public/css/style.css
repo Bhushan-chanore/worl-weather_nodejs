@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Piazzolla', serif;
+}
+
+:root{
+    --main-bg:#1e272e;
+    --main-color:#0097e6;
+}
+
+html{
+    font-size: 62.5%;
+    /* display: flex;
+    flex-direction: column; */
+    /* height: 100vh; */
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_menu{
+     background-color: var(--main-bg);
+     /* background-color: #1e272e; */
+
+}
+.navbar{
+    background-color: var(--main-bg);
+    color:var(--main-color);
+    padding: 2rem 0;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler{
+    color: #fff;
+    background-color: #fff;
+}
+
+.row{
+    margin: 0;
+}
+
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    color: #0097e6;
+}
+
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 2s linear  infinite;
+    color: var(--main-color);
+}
+
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* main header */
+
+.main_header_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:start;
+}
+
+.main_header_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin: 1rem 0 4rem 0;
+}
+
+.main_header_left .text_cl{
+    color: #0097e6;
+}
+
+.main_header_left button{
+
+    padding: 0.8rem 1.4rem;
+    border: none;
+    font-size: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left button:hover{
+    
+    box-shadow: 0 8px 6px -6px #0097e6;
+}
+
+/* weather page */ 
+
+/* .main_header{
+    margin: 3rem 0rem 0rem 3rem;
+} */
+.tempinfo{
+
+    width: 60%;
+    position: relative;
+    /* background-color: #1e272e; */
+    margin: 10rem auto 6rem;
+}
+
+.temp_form input[type="text"]{
+position:relative;
+top: 5px;
+bottom: 5px;
+/* left: 5px; */
+width: 100%;
+padding: 2rem 5rem 2rem 2rem;
+background-color:#1e272e;
+border: none;
+border-radius: 2rem;
+font-size: 2rem;
+color: #fff;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+.temp_form input[type="submit"]
+{
+    position:absolute;
+    border: none;
+    font-size: 2rem;
+    border-radius: 2rem;
+    top: 12px;
+    right: 5px;
+    bottom: 3px;
+    color:#fefdfd ;
+    background-color: #0097e6;
+    padding: 0 3rem;
+
+}
+
+.temp_form input[type="submit"]:hover{
+    background-color: #fff;
+    color: #0097e6;
+}
+
+.mainlayer{
+    width: 40rem;
+    margin: auto;
+    background-color: #1e272e;
+    color:#fff;
+    /* pa  dding: 1rem; */
+    border-radius: 1rem;
+    margin: auto;
+
+}
+
+.toplayer{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: rgb(56, 63, 63);
+}
+
+.toplayer p{
+    color: #fefdfd;
+    /* padding: 2rem; */
+   font-size: 2rem;
+}
+.bottomlayer{
+    flex-direction: column;
+    display: flex;
+    padding: 2rem;
+}
+.b1{
+    padding: 2rem 0.5rem;
+    font-size: 2rem;
+}
+.b2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 2rem 0.5rem;
+    font-size: 6rem; 
+}
+
+.fa-solid{
+    color: #0097e6;
+    font-size: 7rem;
+}
+
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+footer{
+    color: #fff;
+    background-color: #1e272e;
+    width: 100%;
+    font-size: 2rem;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 4rem;
+    margin-top: auto;
+    position:relative;
+}
+footer .text_cl{
+    color: #0097e6;
+}
+
+
+
+
+
+/* response website */
+@media(max-width:768px)
+{
+
+    .main_header_left{
+      height:auto;
+      margin: 5rem 0;
+    }
+    .main_header_right{
+        height:auto;
+        margin: 5rem 0;
+      }
+
+      /* error image styling  */
+      .errimg img{
+        height: 35rem;
+        width: 34rem;
+      }
+      /* weather page */
+      .mainlayer{
+        width: 38.3rem;
+        margin: auto;
+        background-color: #1e272e;
+        color:#fff;
+        border-radius: 1rem;
+    
+    }
+
+    .tempinfo{
+
+        width: 100%;
+        position: relative;
+        margin: 10rem auto 6rem;
+    }
+}
