@@ -5,17 +5,17 @@ const path = require("path");
 const port = process.env.port || 8000;
 
 // for attaching the html in it
-const static_path = path.join(__dirname , "../public");
+const static_path = path.join(__dirname , "/public");
 app.use(express.static(static_path));
 
 
 // for using the hbs i.e tmplet engine
-const templates_path = path.join(__dirname , "../templates/views");
+const templates_path = path.join(__dirname , "/templates/views");
 app.set('view engine' , 'hbs');
 app.set("views" , templates_path);
 
 // for adding the partial file so that we can use navbar or etc
-const partials_path = path.join(__dirname , "../templates/partials");
+const partials_path = path.join(__dirname , "/templates/partials");
 hbs.registerPartials(partials_path);
 
 
